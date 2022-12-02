@@ -28,7 +28,7 @@ namespace MaratG2.TestCode.Datas
         {
             _characterEquipment.OnWeaponChanged -= UpdateMoneyValue;
         }
-        
+
         private void UpdateMoneyValue()
         {
             Value = _characterEquipment.CurrentWeapon.WeaponValue;
