@@ -13,9 +13,9 @@ namespace DG.Tweening
 {
 	public static class DOTweenModuleUI
     {
-        #region Shortcuts
+#region Shortcuts
 
-        #region CanvasGroup
+#region CanvasGroup
 
         /// <summary>Tweens a CanvasGroup's alpha color to the given value.
         /// Also stores the canvasGroup as the tween's target so it can be used for filtered operations</summary>
@@ -26,9 +26,9 @@ namespace DG.Tweening
                 .SetTarget(target);
         }
 
-        #endregion
+#endregion
 
-        #region Graphic
+#region Graphic
 
         /// <summary>Tweens an Graphic's color to the given value.
         /// Also stores the image as the tween's target so it can be used for filtered operations</summary>
@@ -47,9 +47,9 @@ namespace DG.Tweening
                 .SetTarget(target);
         }
 
-        #endregion
+#endregion
 
-        #region Image
+#region Image
 
         /// <summary>Tweens an Image's color to the given value.
         /// Also stores the image as the tween's target so it can be used for filtered operations</summary>
@@ -102,9 +102,9 @@ namespace DG.Tweening
             return s;
         }
 
-        #endregion
+#endregion
 
-        #region LayoutElement
+#region LayoutElement
 
         /// <summary>Tweens an LayoutElement's flexibleWidth/Height to the given value.
         /// Also stores the LayoutElement as the tween's target so it can be used for filtered operations</summary>
@@ -145,9 +145,9 @@ namespace DG.Tweening
                 .SetOptions(snapping).SetTarget(target);
         }
 
-        #endregion
+#endregion
 
-        #region Outline
+#region Outline
 
         /// <summary>Tweens a Outline's effectColor to the given value.
         /// Also stores the Outline as the tween's target so it can be used for filtered operations</summary>
@@ -175,9 +175,9 @@ namespace DG.Tweening
                 .SetTarget(target);
         }
 
-        #endregion
+#endregion
 
-        #region RectTransform
+#region RectTransform
 
         /// <summary>Tweens a RectTransform's anchoredPosition to the given value.
         /// Also stores the RectTransform as the tween's target so it can be used for filtered operations</summary>
@@ -344,7 +344,7 @@ namespace DG.Tweening
                 .SetTarget(target).SetSpecialStartupMode(SpecialStartupMode.SetShake).SetOptions(snapping);
         }
 
-        #region Special
+#region Special
 
         /// <summary>Tweens a RectTransform's anchoredPosition to the given value, while also applying a jump effect along the Y axis.
         /// Returns a Sequence instead of a Tweener.
@@ -384,11 +384,11 @@ namespace DG.Tweening
             return s;
         }
 
-        #endregion
+#endregion
 
-        #endregion
+#endregion
 
-        #region ScrollRect
+#region ScrollRect
 
         /// <summary>Tweens a ScrollRect's horizontal/verticalNormalizedPosition to the given value.
         /// Also stores the ScrollRect as the tween's target so it can be used for filtered operations</summary>
@@ -422,9 +422,9 @@ namespace DG.Tweening
                 .SetOptions(snapping).SetTarget(target);
         }
 
-        #endregion
+#endregion
 
-        #region Slider
+#region Slider
 
         /// <summary>Tweens a Slider's value to the given value.
         /// Also stores the Slider as the tween's target so it can be used for filtered operations</summary>
@@ -436,9 +436,9 @@ namespace DG.Tweening
                 .SetOptions(snapping).SetTarget(target);
         }
 
-        #endregion
+#endregion
 
-        #region Text
+#region Text
 
         /// <summary>Tweens a Text's color to the given value.
         /// Also stores the Text as the tween's target so it can be used for filtered operations</summary>
@@ -473,11 +473,11 @@ namespace DG.Tweening
                 .SetTarget(target);
         }
 
-        #endregion
+#endregion
 
-        #region Blendables
+#region Blendables
 
-        #region Graphic
+#region Graphic
 
         /// <summary>Tweens a Graphic's color to the given value,
         /// in a way that allows other DOBlendableColor tweens to work together on the same target,
@@ -496,9 +496,9 @@ namespace DG.Tweening
                 .Blendable().SetTarget(target);
         }
 
-        #endregion
+#endregion
 
-        #region Image
+#region Image
 
         /// <summary>Tweens a Image's color to the given value,
         /// in a way that allows other DOBlendableColor tweens to work together on the same target,
@@ -517,9 +517,9 @@ namespace DG.Tweening
                 .Blendable().SetTarget(target);
         }
 
-        #endregion
+#endregion
 
-        #region Text
+#region Text
 
         /// <summary>Tweens a Text's color BY the given value,
         /// in a way that allows other DOBlendableColor tweens to work together on the same target,
@@ -538,11 +538,11 @@ namespace DG.Tweening
                 .Blendable().SetTarget(target);
         }
 
-        #endregion
+#endregion
 
-        #endregion
+#endregion
 
-        #endregion
+#endregion
 
         // █████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
         // ███ INTERNAL CLASSES ████████████████████████████████████████████████████████████████████████████████████████████████

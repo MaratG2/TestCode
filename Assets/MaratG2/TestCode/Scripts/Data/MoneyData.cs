@@ -11,7 +11,7 @@ namespace MaratG2.TestCode.Data
     public class MoneyData : MonoBehaviour
     {
         public ulong Money { get; private set; }
-        
+
         private ClickTargetHandler _clickTargetHandler;
         private MoneyValue _moneyValue;
 
