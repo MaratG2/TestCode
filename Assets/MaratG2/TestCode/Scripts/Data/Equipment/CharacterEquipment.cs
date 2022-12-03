@@ -4,12 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace MaratG2.TestCode.Datas
+namespace MaratG2.TestCode.Data
 {
     public class CharacterEquipment : MonoBehaviour
     {
         public event Action OnWeaponChanged;
         private Weapon _currentWeapon;
+        
+        public CharacterEquipment()
+        {
+            CurrentWeapon = new DefaultWeapon();
+        }
+
         public Weapon CurrentWeapon
         {
             get => _currentWeapon;
@@ -18,11 +24,6 @@ namespace MaratG2.TestCode.Datas
                 _currentWeapon = value;
                 OnWeaponChanged?.Invoke();
             }
-        }
-
-        public CharacterEquipment()
-        {
-            CurrentWeapon = new DefaultWeapon();
         }
 
         private void Start()

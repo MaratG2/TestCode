@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using MaratG2.TestCode.Handlers;
 
-namespace MaratG2.TestCode.Datas
+namespace MaratG2.TestCode.Data
 {
     [RequireComponent(typeof(MoneyValue))]
     public class MoneyData : MonoBehaviour

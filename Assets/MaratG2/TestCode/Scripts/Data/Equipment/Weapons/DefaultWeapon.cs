@@ -1,4 +1,4 @@
-﻿namespace MaratG2.TestCode.Datas
+﻿namespace MaratG2.TestCode.Data
 {
     public class DefaultWeapon : Weapon
     {
