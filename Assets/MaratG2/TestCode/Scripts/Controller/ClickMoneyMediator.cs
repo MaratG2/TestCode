@@ -13,10 +13,10 @@ namespace MaratG2.TestCode.Controller
         private void Awake()
         {
             _clickTargetController = FindObjectOfType<ClickTargetController>();
+            _moneyData = FindObjectOfType<MoneyData>();
+            
             if (_clickTargetController == null)
                 UnityExceptions.RaiseTagged(new NullReferenceException(), nameof(_clickTargetController));
-
-            _moneyData = FindObjectOfType<MoneyData>();
             if (_moneyData == null)
                 UnityExceptions.RaiseTagged(new NullReferenceException(), nameof(_moneyData));
         }

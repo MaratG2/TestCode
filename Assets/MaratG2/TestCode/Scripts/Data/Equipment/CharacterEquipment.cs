@@ -6,9 +6,9 @@ using UnityEngine;
 
 namespace MaratG2.TestCode.Data
 {
-    public class CharacterEquipment : MonoBehaviour
+    public sealed class CharacterEquipment : MonoBehaviour
     {
-        public event Action OnWeaponChanged;
+        public event Action<Weapon> OnWeaponChanged;
         private Weapon _currentWeapon;
         
         public CharacterEquipment()
@@ -22,7 +22,7 @@ namespace MaratG2.TestCode.Data
             private set
             {
                 _currentWeapon = value;
-                OnWeaponChanged?.Invoke();
+                OnWeaponChanged?.Invoke(value);
             }
         }
 

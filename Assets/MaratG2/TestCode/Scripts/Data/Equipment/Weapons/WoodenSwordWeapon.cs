@@ -1,6 +1,6 @@
 ﻿namespace MaratG2.TestCode.Data
 {
-    public class WoodenSwordWeapon : Weapon
+    public sealed class WoodenSwordWeapon : Weapon
     {
         public WoodenSwordWeapon() : base()
         {

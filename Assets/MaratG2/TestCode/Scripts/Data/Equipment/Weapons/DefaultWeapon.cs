@@ -1,6 +1,6 @@
 ﻿namespace MaratG2.TestCode.Data
 {
-    public class DefaultWeapon : Weapon
+    public sealed class DefaultWeapon : Weapon
     {
         public DefaultWeapon() : base()
         {

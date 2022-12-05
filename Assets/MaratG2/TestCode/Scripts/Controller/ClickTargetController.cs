@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 namespace MaratG2.TestCode.Controller
 {
-    public class ClickTargetController : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+    public sealed class ClickTargetController : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
     {
         public event Action OnClick;
         public event Action OnEnter;

@@ -1,6 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using MaratG2.Extensions;
 using UnityEngine;
 
 namespace MaratG2.TestCode.Data
@@ -13,25 +12,33 @@ namespace MaratG2.TestCode.Data
         private void Awake()
         {
             _characterEquipment = FindObjectOfType<CharacterEquipment>();
+            if(_characterEquipment == null)
+                UnityExceptions.RaiseTagged(new NullReferenceException(), nameof(_characterEquipment));
         }
 
         private void Start()
         {
-            UpdateMoneyValue();
+            UpdateMoneyValueFromWeaponChange(_characterEquipment.CurrentWeapon);
         }
 
         private void OnEnable()
         {
-            _characterEquipment.OnWeaponChanged += UpdateMoneyValue;
+            _characterEquipment.OnWeaponChanged += UpdateMoneyValueFromWeaponChange;
         }
         private void OnDisable()
         {
-            _characterEquipment.OnWeaponChanged -= UpdateMoneyValue;
+            _characterEquipment.OnWeaponChanged -= UpdateMoneyValueFromWeaponChange;
         }
         
-        private void UpdateMoneyValue()
+        private void UpdateMoneyValueFromWeaponChange(Weapon newWeapon)
         {
-            Value = _characterEquipment.CurrentWeapon.WeaponValue;
+            if(newWeapon == null)
+            {
+                UnityExceptions.RaiseTagged(new ArgumentNullException(), nameof(newWeapon));
+                return;
+            }
+            
+            Value = newWeapon.WeaponValue;
         }
     }
 }
