@@ -12,7 +12,7 @@ namespace MaratG2.TestCode.Data
         private void Awake()
         {
             _characterEquipment = FindObjectOfType<CharacterEquipment>();
-            if(_characterEquipment == null)
+            if (_characterEquipment == null)
                 Debug.LogError(new NullReferenceException(nameof(_characterEquipment)));
         }
 
@@ -29,15 +29,15 @@ namespace MaratG2.TestCode.Data
         {
             _characterEquipment.OnWeaponChanged -= UpdateMoneyValueFromWeaponChange;
         }
-        
+
         private void UpdateMoneyValueFromWeaponChange(Weapon newWeapon)
         {
-            if(newWeapon == null)
+            if (newWeapon == null)
             {
                 Debug.LogError(new ArgumentNullException(nameof(newWeapon)));
                 return;
             }
-            
+
             Value = newWeapon.WeaponValue;
         }
     }

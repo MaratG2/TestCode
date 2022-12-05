@@ -10,12 +10,12 @@ namespace MaratG2.TestCode.View
     {
         [NotNull, SerializeField] private TextMeshProUGUI _moneyCounter;
         private MoneyData _moneyData;
-        
+
         private void Awake()
         {
             _moneyData = FindObjectOfType<MoneyData>();
-            
-            if(_moneyData == null)
+
+            if (_moneyData == null)
                 Debug.LogError(new NullReferenceException(nameof(_moneyData)));
         }
 
@@ -23,12 +23,12 @@ namespace MaratG2.TestCode.View
         {
             _moneyData.OnMoneyChanged += UpdateUI;
         }
-        
+
         private void OnDisable()
         {
             _moneyData.OnMoneyChanged -= UpdateUI;
         }
-        
+
         private void UpdateUI()
         {
             _moneyCounter.text = $"${_moneyData.Money.ToString()}";
