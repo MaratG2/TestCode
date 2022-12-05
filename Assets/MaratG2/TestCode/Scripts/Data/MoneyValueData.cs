@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace MaratG2.TestCode.Data
 {
-    public class MoneyValue : MonoBehaviour
+    public class MoneyValueData : MonoBehaviour
     {
         public ulong Value { get; private set; } = 1;
         private CharacterEquipment _characterEquipment;

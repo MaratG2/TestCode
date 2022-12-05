@@ -2,7 +2,7 @@
 {
     public sealed class WoodenSwordWeapon : Weapon
     {
-        public WoodenSwordWeapon() : base()
+        public WoodenSwordWeapon()
         {
             WeaponValue = 3;
         }

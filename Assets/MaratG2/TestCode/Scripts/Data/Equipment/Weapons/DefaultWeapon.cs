@@ -2,7 +2,7 @@
 {
     public sealed class DefaultWeapon : Weapon
     {
-        public DefaultWeapon() : base()
+        public DefaultWeapon()
         {
             WeaponValue = 1;
         }
