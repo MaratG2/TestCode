@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using MaratG2.TestCode.Handlers;
 
 namespace MaratG2.TestCode.Data
 {
@@ -11,23 +10,17 @@ namespace MaratG2.TestCode.Data
     public class MoneyData : MonoBehaviour
     {
         public ulong Money { get; private set; }
-        
-        private ClickTargetHandler _clickTargetHandler;
         private MoneyValue _moneyValue;
 
         private void Awake()
         {
-            _clickTargetHandler = FindObjectOfType<ClickTargetHandler>();
             _moneyValue = GetComponent<MoneyValue>();
         }
-        private void OnEnable()
+        public void HandleClickInterface()
         {
-            _clickTargetHandler.OnClick += HandleClick;
+            HandleClick();
         }
-        private void OnDisable()
-        {
-            _clickTargetHandler.OnClick -= HandleClick;
-        }
+
         private void HandleClick()
         {
             Money += _moneyValue.Value;

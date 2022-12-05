@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace MaratG2.TestCode.Handlers
+namespace MaratG2.TestCode.Controller
 {
-    public class ClickTargetHandler : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+    public class ClickTargetController : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
     {
         public event Action OnClick;
         public event Action OnEnter;

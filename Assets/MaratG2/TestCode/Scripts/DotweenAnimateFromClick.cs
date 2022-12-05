@@ -2,20 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using MaratG2.TestCode.Handlers;
+using MaratG2.TestCode.Controller;
 using UnityEngine;
 
 namespace MaratG2.TestCode
 {
-    [RequireComponent(typeof(ClickTargetHandler))]
+    [RequireComponent(typeof(ClickTargetController))]
     public class DotweenAnimateFromClick : MonoBehaviour
     {
         [SerializeField] private DOTweenAnimation _doTweenAnimation;
-        private ClickTargetHandler _clickTargetHandler;
+        private ClickTargetController _clickTargetHandler;
 
         private void Awake()
         {
-            _clickTargetHandler = GetComponent<ClickTargetHandler>();
+            _clickTargetHandler = GetComponent<ClickTargetController>();
         }
 
         private void OnEnable()
