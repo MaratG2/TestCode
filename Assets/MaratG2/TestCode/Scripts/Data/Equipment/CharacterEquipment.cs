@@ -10,7 +10,7 @@ namespace MaratG2.TestCode.Data
     {
         public event Action<Weapon> OnWeaponChanged;
         private Weapon _currentWeapon;
-        
+
         public CharacterEquipment()
         {
             CurrentWeapon = new DefaultWeapon();

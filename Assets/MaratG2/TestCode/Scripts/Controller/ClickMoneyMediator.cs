@@ -14,7 +14,7 @@ namespace MaratG2.TestCode.Controller
         {
             _clickTargetController = FindObjectOfType<ClickTargetController>();
             _moneyData = FindObjectOfType<MoneyData>();
-            
+
             if (_clickTargetController == null)
                 UnityExceptions.RaiseTagged(new NullReferenceException(), nameof(_clickTargetController));
             if (_moneyData == null)
