@@ -14,13 +14,11 @@ namespace MaratG2.TestCode.Controller
         {
             _clickTargetController = FindObjectOfType<ClickTargetController>();
             if (_clickTargetController == null)
-                Debug.LogError(UnityExceptions.CreateException
-                    (new NullReferenceException(), nameof(_clickTargetController)));
+                UnityExceptions.RaiseTagged(new NullReferenceException(), nameof(_clickTargetController));
 
             _moneyData = FindObjectOfType<MoneyData>();
             if (_moneyData == null)
-                Debug.LogError(UnityExceptions.CreateException
-                    (new NullReferenceException(), nameof(_moneyData)));
+                UnityExceptions.RaiseTagged(new NullReferenceException(), nameof(_moneyData));
         }
 
         private void OnEnable()
