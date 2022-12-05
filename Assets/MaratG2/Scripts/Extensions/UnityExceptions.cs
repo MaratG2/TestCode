@@ -1,17 +1,10 @@
-﻿namespace MaratG2.Extensions
-{
-    public enum Exceptions
-    {
-        Exception,
-        ArgumentException,
-        ArgumentNullException,
-        ArgumentOutOfRange,
-        NullReferenceException
-    }
+﻿using System;
 
+namespace MaratG2.Extensions
+{
     public static class UnityExceptions
     {
-        public static string CreateException(Exceptions exception, string additionalMessage = "")
+        public static string CreateException(Exception exception, string additionalMessage = "")
         {
             if (string.IsNullOrWhiteSpace(additionalMessage))
                 return exception.ToString();
