@@ -13,7 +13,7 @@ namespace MaratG2.TestCode.Data
         {
             _characterEquipment = FindObjectOfType<CharacterEquipment>();
             if(_characterEquipment == null)
-                UnityExceptions.RaiseTagged(new NullReferenceException(), nameof(_characterEquipment));
+                Debug.LogError(new NullReferenceException(nameof(_characterEquipment)));
         }
 
         private void Start()
@@ -34,7 +34,7 @@ namespace MaratG2.TestCode.Data
         {
             if(newWeapon == null)
             {
-                UnityExceptions.RaiseTagged(new ArgumentNullException(), nameof(newWeapon));
+                Debug.LogError(new ArgumentNullException(nameof(newWeapon)));
                 return;
             }
             
